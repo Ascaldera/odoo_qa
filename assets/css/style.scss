@@ -22,7 +22,7 @@
   box-shadow: var(--shadow-sm);
 
   &::before { // never visible - this is used in JavaScript to check the current MQ
-    content: 'mobile';
+    content: 'Navigation ';
     display: none;
   }
 

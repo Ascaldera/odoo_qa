@@ -20,7 +20,7 @@
 			if(!category) return;
 			var mq = getMq(faqs),
 				selectedCategory = category.getAttribute('href').replace('#', '');
-			if(mq == 'mobile') { // on mobile, open faq panel
+			if(mq == 'Navigation ') { // on Navigation , open faq panel
 				event.preventDefault();
 				faqs.faqContainer.scrollTop = 0;
 				Util.addClass(faqs.faqContainer, 'cd-faq__items--slide-in');
@@ -39,7 +39,7 @@
 			}
 		});
 
-		// on mobile -> close faq panel
+		// on Navigation  -> close faq panel
 		faqs.faqOverlay.addEventListener('click', function(event){
 			closeFaqPanel(faqs);
 		});
@@ -91,7 +91,7 @@
   };
 
   function getMq(faqs) {
-		//get MQ value ('desktop' or 'mobile') 
+		//get MQ value ('desktop' or 'Navigation ') 
 		return window.getComputedStyle(faqs.element, '::before').getPropertyValue('content').replace(/'|"/g, "");
   };
 
